@@ -1,4 +1,3 @@
-require 'pry'
 class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
@@ -12,7 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    binding.pry
-    # self.artists.collect{ |a| a.name }
+    self.artists.collect{ |a| a.name }
   end
 end
