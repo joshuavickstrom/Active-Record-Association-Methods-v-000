@@ -4,6 +4,7 @@ class Song < ActiveRecord::Base
 
   def get_genre_name
     Artist.first(genre: "Rock")
+    binding.pry
   end
 
   def drake_made_this
